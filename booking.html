@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bookingpage</title>
+    <style>
+        body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: url("https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1350&q=80") no-repeat center/cover ;
+         }
+
+
+        .reservation-box {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 30px 40px;
+      border-radius: 12px;
+      width: 100%;
+      max-width: 500px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+
+    .reservation-box h2 {
+      margin-bottom: 10px;
+      font-size: 1.8rem;
+      color: #222;
+    }
+
+    .reservation-box p {
+        margin-bottom: 25px;
+      font-size: 0.95rem;
+      color: #666;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, select, textarea {
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 1rem;
+      outline: none;
+    }
+
+    textarea {
+      height: 80px;
+    }
+
+    button {
+      background: #8B4513;
+      color: #fff;
+      padding: 14px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #5a2e0c;
+    }
+    </style>
+</head>
+<body>
+    <div class="reservation-box">
+    <h2>Book a Table</h2>
+    <p>Please fill out the form to make a reservation.</p>
+
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="tel" placeholder="Phone Number" required>
+      <input type="email" placeholder="Email Address" required>
+      
+      <select required>
+        <option value="">Select Guests</option>
+        <option>1 Person</option>
+        <option>2 Persons</option>
+        <option>3 Persons</option>
+        <option>4 Persons</option>
+        <option>5+ Persons</option>
+      </select>
+
+      <input type="date" required>
+      <input type="time" required>
+
+      <textarea placeholder="Message (Optional)"></textarea>
+
+      <button type="submit">Book a Table</button>
+    </form>
+  </div>
+
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector("form");
+
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const name = form.querySelector('input[placeholder="Your Name"]').value.trim();
+      const phone = form.querySelector('input[placeholder="Phone Number"]').value.trim();
+      const email = form.querySelector('input[placeholder="Email Address"]').value.trim();
+      const guests = form.querySelector('select').value.trim();
+      const date = form.querySelector('input[type="date"]').value;
+      const time = form.querySelector('input[type="time"]').value;
+
+      // Simple validation
+      if (!name || !phone || !email || guests === "Select Guests" || !date || !time) {
+        alert("Please fill in all required fields.");
+        return;
+      }
+
+      // Success message
+      alert("Reservation submitted successfully!");
+      form.reset();
+    });
+  });
+</script>
+
+</body>
+</html>

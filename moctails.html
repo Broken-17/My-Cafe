@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Moctails Menu</title>
+  <style>
+    body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f8f8f8;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-container {
+  max-width: 800px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 32px;
+  border-radius: 10px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+}
+
+.menu-group h2 {
+  margin-top: 32px;
+  font-size: 1.5rem;
+  color: #c0392b;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ececec;
+  padding: 16px 0;
+  flex-direction: row-reverse;
+}
+
+.menu-image {
+  width: 205px;
+  height: 213px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-right: 24px;
+}
+
+.menu-text {
+  flex: 1;
+}
+
+.menu-name {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-right: 12px;
+}
+
+.menu-price {
+  background: #c0392b;
+  color: #fff;
+  padding: 3px 10px;
+  border-radius: 7px;
+  font-size: 1rem;
+}
+
+.menu-text p {
+  margin: 8px 0 0 0;
+  color: #555;
+}
+
+  </style>
+</head>
+<body>
+  <div class="menu-container">
+    <br>
+    <h1>Our Menu</h1>
+    
+    <section class="menu-group">
+
+      <div class="menu-item">
+        <img src="images/berry.jpg" class="menu-image">
+        <div class="menu-text">
+          <span class="menu-name">Berry moctail</span>
+          <span class="menu-price">₹250</span>
+          <p>A refreshing blend of juicy mixed berries with a splash of citrus, lightly sweet and perfectly chilled.</p>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <img src="images/butterfly.jpg" class="menu-image">
+        <div class="menu-text">
+          <span class="menu-name">Butterfly moctail</span>
+          <span class="menu-price">₹220</span>
+          <p>A magical, color-changing mocktail made with butterfly pea flower infusion and fresh citrus, light, floral, and refreshing.</p>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <img src="images/green.jpg" class="menu-image">
+        <div class="menu-text">
+          <span class="menu-name">Green moctail</span>
+          <span class="menu-price">₹200</span>
+          <p>A refreshing blend of crisp green apple, fresh mint, and zesty lime, served chilled for a clean and cooling taste.</p>
+        </div>
+        </div>
+
+    </section>
+</body>
+</html>

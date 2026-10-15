@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Our Menu</title>
+  <style>
+    body {
+  background: #ecd7e0;
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.menu-header {
+  background: #ecd7e0;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-header h1 span {
+  background: #f7f7fc;
+  color:#efb6cf;
+  font-size: 2.5rem;
+  font-weight: 700;
+  padding: 0.7em 2em;
+  border-radius: 6px;
+  box-shadow: none;
+  letter-spacing: 1px;
+}
+
+.menu-cards {
+  display: flex;
+  justify-content: center;
+  gap: 56px;
+  margin-top: 20px;
+  padding-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #f7f7fc;
+  text-align: left;
+  width: 250px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(44, 48, 61, 0.11);
+  transition: transform 0.16s, box-shadow 0.16s;
+  text-decoration: none;
+  color: #2a2a2a;
+  padding: 22px 18px 18px 18px;
+
+
+
+}
+.card img {
+  
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 14px;
+  margin-right: 0px;
+}
+.card h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 6px 0 4px 0;
+}
+.card p {
+  font-size: 1.05rem;
+  color: #444;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(32, 144, 68, 0.12);
+}
+
+
+@media (max-width: 1024px) {
+  .menu-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 34px;
+  }
+  .card {
+    width: 92%;
+    max-width: 340px;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <div class="menu-header">
+    <h1><span>Our Menu</span></h1>
+  </div>
+  <div class="menu-cards">
+    <a href="pizza.html" class="card">
+      <img src="images/pizza.png" alt="Desserts">
+      <h2>PIZZA</h2>
+      <p>Click to view our Pizza Menu</p>
+    </a>
+    <a href="coffee.html" class="card">
+      <img src="images/coffe.png" alt="Coffee">
+      <h2>COFFEE</h2>
+      <p>Click to see our Warm Coffees</p>
+    </a>
+   
+    <a href="moctails.html" class="card">
+      <img src="images/lemonade.png" alt="Desserts">
+      <h2>MOCTAILS</h2>
+      <p>Click to see our Moctails Menu</p>
+    </a>
+    <a href="deserts.html" class="card">
+      <img src="images/desert.png" alt="Desserts">
+      <h2>DESSERTS</h2>
+      <p>Click to see our Desserts Menu</p>
+    </a>
+  </div>
+</body>
+</html>
+
+  <script>
+    // JavaScript to highlight selected card
+    const cards = document.querySelectorAll('.card');
+    cards.forEach(card => {
+      card.addEventListener('click', function(e) {
+        // Remove active class from all cards
+        cards.forEach(c => c.classList.remove('active'));
+        // Add active class to clicked card
+        this.classList.add('active');
+      });
+    });
+
+    // Optional: Background color change on scroll
+    window.addEventListener('scroll', () => {
+      const scroll = window.scrollY;
+      document.body.style.background = `linear-gradient(135deg, rgba(252,228,236,${1 - scroll/1000}), rgba(243,229,245,${1 - scroll/1000}))`;
+    });
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <style>
+      .detail-menu {
+      padding: 60px 20px;
+      background-color: aliceblue;
+      
+    }
+
+    .detail-menu h2 {
+      margin-bottom:20px;
+      color: #a52a2a;
+    }
+
+    .our-menu {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .our-menu h2 {
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 40px;
+    }
+
+    .menu-container {
+      display:flex ;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .menu-item {
+      text-align: center;
+    }
+
+    .menu-item img {
+      width: 200px;
+      height: auto;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .menu-item img:hover {
+      transform: scale(1.05);
+    }
+
+    .menu-item h3 {
+      font-size: 30px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      margin-top: 10px;
+      color: #b37e7e;
+      font-family: "Marck Script", cursive;
+      font-weight: 400;
+    }
+
+    .menu-item p {
+      font-size: 15px;
+      color: #8f6904 ;
+      line-height: 1.6;
+      font-family: julee;
+    }
+
+     </style>
+</head>
+<body>
+    <section id="coffee" class="detail-menu">
+    <div class="menu-container">
+      <div class="menu-item">
+        <img src="images/capp.png" alt="Hot Beverages">
+        <h3>Cappuccino</h3>
+        <p>A rich blend of espresso, steamed milk, and a frothy crown of foam.</p>
+      </div>
+
+      <div class="menu-item">
+        <img src="images/matcha.jpg" alt="Cold Beverages">
+        <h3>Matcha Latte</h3>
+        <p>Creamy steamed milk infused with finely ground Japanese green tea.</p>
+      </div>
+
+      <div class="menu-item">
+        <img src="images/mocha.png" alt="Refreshment">
+        <h3>Mocha</h3>
+        <p>Smooth espresso blended with chocolate, steamed milk, and a touch of sweetness.</p>
+      </div>
+      </div>
+      </section>
+</body>
+</html>
